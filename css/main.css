@@ -13,6 +13,7 @@ ul li{font-size:1.3em;}
 ol li{font-size:1.3em;}
 
 ul {line-height: 45px;}
+li {margin: 10px 0;}
 
 h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 3em;  }
