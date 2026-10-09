@@ -1,38 +1,304 @@
-body {
-    margin: 60px auto;
-    width: 70%;
-    background-image: linear-gradient(to bottom, rgba(0,83,159,0.08), rgba(0,83,159,0.08));
+
+/* =========================================
+   General Website Styling
+   ========================================= */
+
+* {
+    box-sizing: border-box;
 }
 
-a { text-decoration: none; color: #262626; }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAF8;
+    color: #293241;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
 
+/* =========================================
+   Main Content Container
+   ========================================= */
 
-p, ul { font-size: 1.3em; line-height: 1.4em; color: #333; }
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 30px 60px;
+}
 
-ul li{font-size:1.3em;}
-ol li{font-size:1.3em;}
+/* =========================================
+   Navigation
+   ========================================= */
 
-ul {line-height: 20px;}
-li {margin: 10px 0;}
+.site-nav {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 28px 30px 20px;
+    border-bottom: 1px solid #E2E5E8;
+}
 
-h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-h1 { font-size: 3em;  }
-h2 { font-size: 2.7em; }
-h3 { font-size: 2.3em; }
-h4 { font-size: 1.9em; }
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
 
-nav ul, footer ul { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
-nav ul li, footer ul li { display: inline; margin-right: 20px; }
+.site-nav li {
+    margin: 0;
+    font-size: 0.95rem;
+}
 
-nav ol, footer ol { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
-nav ol li, footer ol li { display: inline; margin-right: 20px; }
+.site-nav a {
+    color: #34495E;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
 
-footer { position: absolute; bottom: 0; border-top: 1px solid #d5d5d5; font-size: .8em; }
+.site-nav a:hover {
+    color: #1B4965;
+}
+
+/* =========================================
+   General Typography
+   ========================================= */
+
+h1, h2, h3, h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    color: #293241;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #264B70;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   Lists
+   ========================================= */
+
+ul, ol {
+    line-height: 1.7;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   Horizontal Separators
+   ========================================= */
+
+hr {
+    border: none;
+    border-top: 1px solid #E2E5E8;
+    margin: 35px 0;
+}
+
+/* =========================================
+   Homepage Layout
+   ========================================= */
+
+.home-container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0;
+}
+
+.home-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 45px;
+    align-items: start;
+}
+
+/* Homepage Name */
+
+.home-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-weight: normal;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    margin: 0 0 14px;
+}
+
+/* Position and Affiliation */
+
+.home-position {
+    font-size: 1.1rem;
+    color: #526477;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Biography */
+
+.home-bio p {
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 20px;
+}
+
+/* Headshot */
+
+.home-photo {
+    width: 220px;
+    max-width: 100%;
+}
+
+.home-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+/* =========================================
+   Homepage Professional Links
+   ========================================= */
+
+.home-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.home-links a {
+    color: #264B70;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #B8C7D5;
+    padding-bottom: 3px;
+}
+
+.home-links a:hover {
+    color: #102D49;
+    border-bottom-color: #102D49;
+}
+
+/* =========================================
+   Homepage Additional Sections
+   ========================================= */
+
+.home-section {
+    margin-top: 65px;
+    padding-top: 28px;
+    border-top: 1px solid #E1E5E8;
+}
+
+.home-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   Teaching Page Formatting
+   ========================================= */
 
 .sem-label {
-  display: inline-block;
-  width: 6em;    /* or whatever width aligns things nicely */
-  /* optionally: text-align: right; */
+    display: inline-block;
+    width: 6em;
 }
 
+/* =========================================
+   Mobile / Tablet Responsiveness
+   ========================================= */
 
+@media (max-width: 750px) {
+
+    .container {
+        padding: 0 20px 40px;
+    }
+
+    /* Navigation */
+
+    .site-nav {
+        padding: 20px;
+    }
+
+    .site-nav ul {
+        gap: 20px;
+    }
+
+    /* Typography */
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Homepage */
+
+    .home-container {
+        margin: 30px auto;
+    }
+
+    .home-intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .home-name {
+        font-size: 2.6rem;
+    }
+
+    .home-photo {
+        grid-row: 1;
+        width: 220px;
+        max-width: 100%;
+    }
+
+    .home-links {
+        gap: 18px;
+    }
+
+    .home-section {
+        margin-top: 45px;
+    }
+}
